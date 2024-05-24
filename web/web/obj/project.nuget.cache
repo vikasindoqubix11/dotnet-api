@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ly6JqCnsB9M=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\IQ-Vikas\\source\\repos\\web\\web\\web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IQ-Vikas\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.5\\microsoft.dotnet.ilcompiler.8.0.5.nupkg.sha512",
+    "C:\\Users\\IQ-Vikas\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.5\\microsoft.net.illink.tasks.8.0.5.nupkg.sha512",
+    "C:\\Users\\IQ-Vikas\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.5\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
