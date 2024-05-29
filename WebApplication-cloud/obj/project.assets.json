@@ -434,11 +434,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IQ-Vikas\\Desktop\\source\\repos\\WebApplication-cloud\\WebApplication-cloud.csproj",
+      "projectUniqueName": "C:\\Users\\IQ-Vikas\\dotnet-api\\WebApplication-cloud\\WebApplication-cloud.csproj",
       "projectName": "WebApplication-cloud",
-      "projectPath": "C:\\Users\\IQ-Vikas\\Desktop\\source\\repos\\WebApplication-cloud\\WebApplication-cloud.csproj",
+      "projectPath": "C:\\Users\\IQ-Vikas\\dotnet-api\\WebApplication-cloud\\WebApplication-cloud.csproj",
       "packagesPath": "C:\\Users\\IQ-Vikas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IQ-Vikas\\Desktop\\source\\repos\\WebApplication-cloud\\obj\\",
+      "outputPath": "C:\\Users\\IQ-Vikas\\dotnet-api\\WebApplication-cloud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
