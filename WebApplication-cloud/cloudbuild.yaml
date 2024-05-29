@@ -10,6 +10,3 @@ steps:
       - push
       - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
 
-timeout: 1200s
-images:
-  - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
