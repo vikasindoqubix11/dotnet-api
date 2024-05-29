@@ -5,8 +5,11 @@ steps:
       - '-t'
       - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
       - .
+
   - name: gcr.io/cloud-builders/docker
     args:
       - push
       - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
