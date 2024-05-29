@@ -1,4 +1,4 @@
-# Use the official .NET SDK image
+# Use the official .NET SDK image for building
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 WORKDIR /source
@@ -11,13 +11,16 @@ RUN dotnet restore
 COPY . ./
 
 # Build the application
-RUN dotnet publish -c Release -o out
+RUN dotnet publish -c Release -o /app/out  # Output directory should be /app/out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build/source .
+
+# Copy the published output from the build stage into the runtime image
+COPY --from=build /app/out .  # Copy from the correct path
 
 EXPOSE 80
 
+# Set the entry point for the application
 ENTRYPOINT ["dotnet", "WebApplication-cloud.dll"]
