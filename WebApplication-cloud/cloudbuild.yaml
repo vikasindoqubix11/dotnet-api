@@ -1,6 +1,3 @@
-options:
-  logging: CLOUD_LOGGING_ONLY
-
 steps:
   - name: gcr.io/cloud-builders/docker
     args:
@@ -15,3 +12,6 @@ steps:
       - push
       - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
     dir: WebApplication-cloud  # Specify the directory containing the Dockerfile
+
+options:
+  logging: CLOUD_LOGGING_ONLY
