@@ -15,10 +15,10 @@ RUN dotnet publish -c Release -o /app/out  # Output directory should be /app/out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
+WORKDIR /source  # Change the working directory to /source
 
 # Copy the published output from the build stage into the runtime image
-COPY --from=build /app/out .  # Copy from the correct path
+COPY --from=build /app/out ./
 
 EXPOSE 80
 
