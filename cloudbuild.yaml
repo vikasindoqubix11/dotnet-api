@@ -6,7 +6,6 @@ steps:
       - '-t'
       - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
       - .
-  #push
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - push
