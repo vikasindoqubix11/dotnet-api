@@ -4,11 +4,11 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /source
 
 # Copy the project file into the container
-COPY *.csproj ./
+COPY ./WebApplication-cloud/*.csproj ./
 RUN dotnet restore
 
 # Copy the rest of the files into the container
-COPY . .
+COPY ./WebApplication-cloud .
 
 # Build the application
 RUN dotnet publish -c Release -o /app --no-restore
