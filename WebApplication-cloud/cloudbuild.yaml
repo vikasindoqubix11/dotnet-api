@@ -1,15 +1,15 @@
 steps:
-  – name: gcr.io/cloud-builders/docker
+  - name: gcr.io/cloud-builders/docker
     args:
-      – build
-      – '-t'
-      – 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
-      – .
-  – name: gcr.io/cloud-builders/docker
+      - build
+      - '-t'
+      - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
+      - .
+  - name: gcr.io/cloud-builders/docker
     args:
-      – push
-      – 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
-  
+      - push
+      - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
+
 timeout: 1200s
 images:
-  – 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
+  - 'us-east1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artifact'
