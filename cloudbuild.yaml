@@ -1,15 +1,26 @@
 steps:
-  #build
+  # Build
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - build
       - '-t'
       - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
       - .
+  # Push and deploy
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - push
       - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - run
+      - deploy
+      - 'web-deploy' 
+      - '--image'
+      - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest' 
+      - '--region'
+      - 'us-central1' 
+      - '--platform'
+      - 'managed'
 options:
   logging: CLOUD_LOGGING_ONLY
-
