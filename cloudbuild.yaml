@@ -17,19 +17,12 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:
-      - 'run'
-      - 'deploy'
-      - 'web-deploy'
+      - run
+      - deploy
+      - assessment
       - '--image'
       - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
       - '--region'
-      - 'us-central1'
-      - '--platform'
-      - 'managed'
-      - '--allow-unauthenticated'
- 
+      - us-central1
 options:
   logging: CLOUD_LOGGING_ONLY
- 
-images:
-  - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
