@@ -1,5 +1,5 @@
 steps:
-  # Build the Docker image
+  # Build the Docker image--Image of docker file
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - build
@@ -13,7 +13,7 @@ steps:
       - push
       - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
  
-  # Deploy to Cloud Run
+  # Deploy to Cloud Run--name-> CLI goodle cloud sdk kit 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:
