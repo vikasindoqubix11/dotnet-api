@@ -13,6 +13,7 @@ steps:
       - 'us-central1-docker.pkg.dev/cloud-run-tutorial-424007/dotnet-api-artiii/web:latest'
   # Deploy
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
     args:
       - 'run'
       - 'deploy'
@@ -23,6 +24,5 @@ steps:
       - 'us-central1'
       - '--platform'
       - 'managed'
-      entrypoint: 'gcloud'
 options:
   logging: CLOUD_LOGGING_ONLY
