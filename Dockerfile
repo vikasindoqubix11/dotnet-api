@@ -20,7 +20,7 @@ WORKDIR /source  # Change the working directory to /source
 # Copy the published output from the build stage into the runtime image
 COPY --from=build /app/out ./
 
-EXPOSE 8080
+EXPOSE 3000
 
 # Set the entry point for the application
 ENTRYPOINT ["dotnet", "WebApplication-cloud.dll"]
